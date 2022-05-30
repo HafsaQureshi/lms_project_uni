@@ -1,0 +1,138 @@
+<style>
+    .user-comments {
+        /* height: 70%; */
+        display: block;
+        padding-bottom: 0;
+        padding-top: 1rem;
+        text-align: center;
+        background: #7aa033;
+        overflow: hidden;
+    }
+
+    .user-comments-img {
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        border-style: solid;
+        border-width: 3px;
+        border-color: #7aa033;
+        vertical-align: middle;
+        max-width: 100%;
+    }
+
+    .user-comments-pera {
+        text-align: justify;
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+
+    .s-btn {
+        background-color: black !important;
+        border-color: black !important;
+        color: white !important;
+        padding: .5%;
+        border-radius: 5px;
+        ;
+    }
+
+    .s-btn:hover {
+        background-color: black !important;
+        border-color: black !important;
+        color: white !important;
+        border: black;
+        padding: .5%;
+        border-radius: 5px;
+        ;
+    }
+</style>
+
+
+
+<div class="user-comments w3-content ">
+    <h2 style="color: white;">Testimonials</h2>
+    <p>Companies and institutions that believe in us</p>
+    <hr>
+
+    <div class="row mySlides">
+        <div>
+            <img class="user-comments-img"
+            src="images/amnaz.jpg"
+            title=""><br>
+            <p class="user-comments-pera">I would like to pass my personal best wishes and big thanks to the entire teamon your side for delivering our project with such a delight and excellence. You did a wonderful job , up to our exquisite expectations and we are infinitely greatful.</p>
+            <p style="color: white;">Amna Zafar</p>
+        </div>
+    </div>
+
+    <div class="row mySlides">
+        <div>
+            <img class="user-comments-img"
+            src="images/amna.jpg"
+            title=""><br>
+            <p class="user-comments-pera">E-Learning is a simple, reliable, easy to use interactive learning platform that has helped train hundreds of people across multiple locations. We will continue to leverage Technology for all our learning requirements and platforms like E-Learning to make the journey easier and better</p>
+            <p style="color: white;">Sheikh Sayem</p>
+        </div>
+    </div>
+
+    <div class="row mySlides">
+        <div>
+            <img class="user-comments-img"
+            src="images/sayem.jpg"
+            title=""><br>
+            <p class="user-comments-pera">The E-Learning platform is intuitive and quick to set up allowing our teams around the world to access up-to-date courses without the need to install software. E-Learning is mobile friendly, allowing our remote users to gain knowledge and training on a more regular basis.</p>
+            <p style="color: white;">Hajra Rafiq</p>
+        </div>
+    </div>
+
+    <div class="row mySlides">
+        <div>
+            <img class="user-comments-img"
+                src="images/hajra.jpg"
+                title=""><br>
+            <p class="user-comments-pera">The best part is the friendly relationship we have with the E-Learning team. They seem willing and able to address our concerns in a highly collaborative manner, which is very helpful and refreshing.</p>
+            <p style="color: white;">Amna Rashid</p>
+        </div>
+    </div>
+
+    <div class="w3-center">
+        <div class="w3-section">
+            <button class=" s-btn" onclick="plusDivs(-1)">❮ Prev</button>
+            <button class="  s-btn" onclick="plusDivs(1)">Next ❯</button>
+        </div>
+    </div>
+
+    <br>
+    <br>
+</div>
+
+
+
+
+
+<script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+        showDivs(slideIndex += n);
+    }
+
+    function currentDiv(n) {
+        showDivs(slideIndex = n);
+    }
+
+    function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        if (n > x.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = x.length }
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" w3-red", "");
+        }
+        x[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " w3-red";
+    }
+</script>
